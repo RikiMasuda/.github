@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 質問 / 相談
+    about: 実装方針や仕様の相談は Discussions や PR コメントも検討してください（運用に合わせて変更可）
+    url: https://github.com
