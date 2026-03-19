@@ -1,0 +1,39 @@
+name: Task
+description: 調査・作業・小さめの改善など
+title: "[Task]: "
+labels: ["task"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      placeholder: 例）CI の実行時間を短縮する
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: 作業項目
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足 / 依存関係（任意）
+      description: 関連Issue・関連PR・ブロッカーなど
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: 完了条件（DoD）
+      options:
+        - label: 作業項目が完了している（必要に応じて更新済み）
+        - label: 影響範囲に応じた確認が完了している
+        - label: 必要ならドキュメントが更新されている

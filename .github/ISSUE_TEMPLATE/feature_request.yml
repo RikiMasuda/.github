@@ -1,0 +1,52 @@
+name: Feature request
+description: 機能要望 / 改善提案
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        「なぜ必要か（Why）」が分かると検討がスムーズです（軽めテンプレ）。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 背景 / 課題
+      description: 何が困っているか、誰のためか
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+      description: どうしたいか（箇条書きでOK）
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 受け入れ条件（Acceptance Criteria）
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 範囲 / 非範囲（任意）
+      description: やること・やらないこと
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: 完了条件（DoD）
+      options:
+        - label: 受け入れ条件が満たされている
+        - label: 影響範囲に応じたテスト / 動作確認が完了している
+        - label: 必要ならドキュメントが更新されている

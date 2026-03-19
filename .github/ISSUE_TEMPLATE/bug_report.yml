@@ -1,0 +1,73 @@
+name: Bug report
+description: バグ報告
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        可能な範囲で埋めてください（軽めのテンプレです）。再現が難しい場合は状況説明だけでもOKです。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: 何が起きているか（1〜3行）
+      placeholder: 例）ログイン後にプロフィール画面が真っ白になる
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する結果
+      placeholder: 例）プロフィール情報が表示される
+    validations:
+      required: false
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の結果
+      placeholder: 例）画面が真っ白で操作できない
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 分かる範囲でOK
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+
+  - type: textarea
+    id: env
+    attributes:
+      label: 環境（任意）
+      description: OS / ブラウザ / バージョンなど
+      placeholder: 例）macOS 14 / Chrome 123 / app v1.2.3
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足（ログ / スクショ等）
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: 完了条件（DoD）
+      description: Issue を閉じる判断に使います（状況に合わせて編集してください）
+      options:
+        - label: 再現条件または原因が特定できている
+        - label: 修正が実装されている
+        - label: 影響範囲に応じた確認（手動 / テスト）が完了している
+        - label: 必要ならドキュメント / リリースノートが更新されている
