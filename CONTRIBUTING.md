@@ -7,6 +7,7 @@
 - [コミットメッセージ規約](./commit-rules.md)
 - [Pull Request の作り方](./PULL_REQUEST_TEMPLATE.md)
 - [Issue の作り方](./.github/ISSUE_TEMPLATE/)
+- [コーディング規約](./coding-style.md)
 
 ## 基本方針（共通）
 
