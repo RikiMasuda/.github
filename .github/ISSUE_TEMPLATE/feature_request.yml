@@ -6,13 +6,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        「なぜ必要か（Why）」が分かると検討がスムーズです（軽めテンプレ）。
+        **背景**と**提案**を簡潔に記入してください。完成イメージがあれば、より実装しやすくなります。
 
   - type: textarea
     id: problem
     attributes:
       label: 背景 / 課題
-      description: 何が困っているか、誰のためか
+      description: What/Why：何が必要か、なぜ必要か
+      placeholder: |
+        例：機械学習モデルの比較が手動なので、自動で複数モデルの精度を比較できるようにしたい
     validations:
       required: true
 
@@ -20,33 +22,28 @@ body:
     id: proposal
     attributes:
       label: 提案内容
-      description: どうしたいか（箇条書きでOK）
+      description: How/What：どうしたいか、実装内容
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
     validations:
       required: true
 
   - type: textarea
     id: acceptance
     attributes:
-      label: 受け入れ条件（Acceptance Criteria）
+      label: 完成イメージ（任意）
+      description: この機能ができたら「完成」と判断するポイント
       placeholder: |
-        - [ ] ...
-        - [ ] ...
-    validations:
-      required: false
-
-  - type: textarea
-    id: scope
-    attributes:
-      label: 範囲 / 非範囲（任意）
-      description: やること・やらないこと
+        - [ ] 複数のモデルの精度が表で比較できる
+        - [ ] CSV エクスポート機能がある
     validations:
       required: false
 
   - type: checkboxes
-    id: dod
+    id: verification
     attributes:
-      label: 完了条件（DoD）
+      label: 確認項目
       options:
-        - label: 受け入れ条件が満たされている
-        - label: 影響範囲に応じたテスト / 動作確認が完了している
-        - label: 必要ならドキュメントが更新されている
+        - label: 動作確認が完了している
+        - label: ドキュメント・コメントが追加されている
