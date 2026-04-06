@@ -21,14 +21,6 @@ body:
     validations:
       required: false
 
-  - type: textarea
-    id: notes
-    attributes:
-      label: 補足 / 依存関係（任意）
-      description: 関連Issue・関連PR・ブロッカーなど
-    validations:
-      required: false
-
   - type: checkboxes
     id: dod
     attributes:
