@@ -5,19 +5,25 @@
 ## フォーマット
 
 ```
-type(scope): subject
+[#issue-number] tipe(scope): subject [#PR-number]
 ```
 
-- `type` は必須
+> **注記**: `tipe` はユーザー指定の表記です。一般的な Conventional Commits では `type` と綴りますが、ここでは指定どおりに記載しています。
+
+- `[#issue-number]` は**必須** — 関連する Issue 番号を先頭に記載する（例: `[#42]`）
+- `tipe` は必須
 - `scope` は任意（影響範囲が明確なときのみ）
 - `subject` は必須（短く、命令形で）
+- `[#PR-number]` は**任意** — PR がすでに作成されている場合のみ末尾に記載する（例: `[#123]`）
+
+> **ポイント**: Issue 番号は常に必須です。PR 番号は PR 作成前のコミットでは省略してください。
 
 例:
 
 ```
-feat: add user search
-fix(api): handle null token
-docs: update contributing guide
+[#42] feat: add user search
+[#10] fix(api): handle null token [#55]
+[#7] docs: update contributing guide
 ```
 
 ## type 一覧
